@@ -41,7 +41,7 @@ def add_entry(name, text):
 def delete_entry(delete_id):
     global entries, GUESTBOOK_ENTRIES_FILE
     for ele in entries:
-        if int(delete_id) == list(ele.values())[-1]:
+        if int(delete_id) == ele["id"]:
             try:
                 entries.remove(ele)
             except:

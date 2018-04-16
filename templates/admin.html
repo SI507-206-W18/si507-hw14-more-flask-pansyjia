@@ -9,10 +9,11 @@
     <div class="entry">
         <p class="entrytext"> {{e['text']}} </p>
         <p class="metadata"> by {{e['author']}} on {{e['timestamp']}} </p>
+        <p>id:{{e['id']}}</p>
     </div>
-    <!-- <h2>id:{{e['id']}}<h2> -->
+
     <form action ="/delete" method="POST" >
-        <input type="hidden" name="id" value="{{e['id']}}">
         <input type="submit" name="delete" value="X">
+        <input type="hidden" name="id" value="{{e['id']}}">
     </form>
 {% endfor %}

@@ -28,8 +28,8 @@ def admin():
 
 
 @app.route("/delete", methods=["POST"])
-def delete():
-    print('delete function')
+def delete_entry():
+    # print('delete function')
     idnum = request.form["id"]
     print(idnum)
     print(request.form["delete"])
