@@ -38,10 +38,10 @@ def add_entry(name, text):
         print("ERROR! Could not write entries to file.")
 
 
-def delete_entry(delete_id):
+def delete_entry(idnum):
     global entries, GUESTBOOK_ENTRIES_FILE
     for ele in entries:
-        if int(delete_id) == ele["id"]:
+        if int(idnum) == ele["id"]:
             try:
                 entries.remove(ele)
             except:
