@@ -3,18 +3,16 @@
 <h1> Welcome to my guestbook! </h1>
 
 <p><a href="/add">Add a message</a></p>
-123
+<!-- 123 -->
 
 {% for e in entries %}
     <div class="entry">
         <p class="entrytext"> {{e['text']}} </p>
         <p class="metadata"> by {{e['author']}} on {{e['timestamp']}} </p>
-        <p>id: {{e['id']}}<p>
-        <form action ="/delete" method="POST" >
-          <input type="hidden" name="aaa" value="{{['id']}}">
-          <input type="submit" name="bbb" value="{{['X']}}">
-        </form>
-
     </div>
-
+    <!-- <h2>id:{{e['id']}}<h2> -->
+    <form action ="/delete" method="POST" >
+        <input type="hidden" name="id" value="{{e['id']}}">
+        <input type="submit" name="delete" value="X">
+    </form>
 {% endfor %}
